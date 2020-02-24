@@ -14,6 +14,7 @@ window.onload=function(){
     document.getElementById("AboutPyramidDoctors").style.display="none";
     document.getElementById("AboutOutlets").style.display="none";
     document.getElementById("AboutOrganisation").style.display="none";
+        document.getElementById("AboutFounder").style.display="none";
         
     }else{
         document.getElementById("Aboutintroduction").style.display="none";
@@ -21,6 +22,7 @@ window.onload=function(){
         document.getElementById("AboutPyramidDoctors").style.display="none";
         document.getElementById("AboutOutlets").style.display="none";
         document.getElementById("AboutOrganisation").style.display="none";
+        document.getElementById("AboutFounder").style.display="none";
         document.getElementById("About"+id).style.display="block";
     }
     

@@ -40,7 +40,8 @@ function displayMenu(){
                         <li id="PyramidDoctorsPage"><a href="aboutUs.html#PyramidDoctors" onclick="displayContent(\'PyramidDoctors\')">Pyramid Doctors</a></li>\
                         <li id="OutletsPage"><a href="aboutUs.html#Outlets" onclick="displayContent(\'Outlets\')">Outlets</a></li>\
                         <li id="OrganisationPage"><a href="aboutUs.html#Organisation" onclick="displayContent(\'Organisation\')">Organisation</a></li>\
-                    </ul>\
+<li id="FounderPage"><a href="aboutUs.html#Founder" onclick="displayContent(\'Founder\')">Founder</a></li>\
+                        </ul>\
                 </li>\
 \
                 <li id="testmonialsPage" class="dropdown">\
@@ -116,7 +117,7 @@ function displayFooter(){
 \
         <div class="col-sm-4">\
              <h3 class="footerHeading">Follow Us</h3>\
-            <h4 class="socialMedia"><a href="https://www.facebook.com/spiritualhealth.care" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> &nbsp; &nbsp;<a href="https://www.youtube.com/channel/UCId8SiDTSyYh0IqsDxbEMiQ" target="_blank"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></h4>\
+            <h4 class="socialMedia"><a href="https://www.facebook.com/spiritualhealth.care" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a> &nbsp; &nbsp;<a href="https://www.youtube.com/channel/UCId8SiDTSyYh0IqsDxbEMiQ" target="_blank"><i class="fa fa-youtube-play" aria-hidden="false"></i></a></h4>\
         </div>\
     </div>')
 }
@@ -141,6 +142,33 @@ function validateSelectExperience(){
         document.getElementById("TeluguAudios").style.display="none"
     }
     return true;
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
 }
 
 
